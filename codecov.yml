@@ -1,7 +1,27 @@
 coverage:
   status:
     project:
-      default:
-        target: 100%
-        threshold: 1%
+      default: off
+    patch:
+      default: off
 
+flag_management:
+  individual_flags:
+    - name: backend
+      paths:
+        - api/
+      statuses:
+        - type: project
+          target: 100%
+          threshold: 1%
+        - type: patch
+          informational: true
+    - name: frontend
+      paths:
+        - web/
+      statuses:
+        - type: project
+          target: auto
+          threshold: 1%
+        - type: patch
+          informational: true
