@@ -12,3 +12,4 @@ class Calculator:
         if y == 0:
             return 'Cannot divide by 0'
         return x * 1.0 / y
+
